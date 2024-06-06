@@ -9,7 +9,7 @@ class ElasQuad4(Elas):
 #   ****************** 
 #      INITIALIZER
 #   ******************
-  def __init__(self, E: float = -1., nu: float = -1., isplanestress: bool = True, b: list[float] = [0,0], nodevec: list[int] = []):
+  def __init__(self, E: float = -1., nu: float = -1., isplanestress: bool = True, b: list[float] = [0,0], nodevec: list[int] = [], t = 1.0):
     """Initializer for ElasQuad4 class
 
     Args:
@@ -22,7 +22,7 @@ class ElasQuad4(Elas):
     if len(nodevec) != 4:
       DebugStop("Inconsistent nodevec vector")
         
-    super().__init__(E=E,nu=nu,isplanestress=isplanestress,b=b,nodevec=nodevec)
+    super().__init__(E=E,nu=nu,isplanestress=isplanestress,b=b,nodevec=nodevec,t=t)
     super().deactivateChecks()
     self.pord = 2 # minimum number of integration points in the case of linear element
     super().activateChecks()

@@ -128,12 +128,13 @@ class GmshReader(OOInterface):
       E = self.physicalgroupToBC[pg_name]["E"]
       nu = self.physicalgroupToBC[pg_name]["nu"]
       b = self.physicalgroupToBC[pg_name]["b"]
+      t = self.physicalgroupToBC[pg_name]["thickness"]
       isplanestress = self.physicalgroupToBC[pg_name]["isplanestress"]
       nodevec = [self.mesh.nodevec[nodind] for nodind in el_node_indices]
       if elname == "tria":
-        el = ElasTria3(E=E,nu=nu,b=b,nodevec=nodevec,isplanestress=isplanestress)
+        el = ElasTria3(E=E,nu=nu,b=b,nodevec=nodevec,isplanestress=isplanestress,t=t)
       elif elname == "quad":
-        el = ElasQuad4(E=E,nu=nu,b=b,nodevec=nodevec,isplanestress=isplanestress)
+        el = ElasQuad4(E=E,nu=nu,b=b,nodevec=nodevec,isplanestress=isplanestress,t=t)
       
     elif self.type == "Elas3D":
       DebugStop("Reader for 3D elements not implemented yet.")

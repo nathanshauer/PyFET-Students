@@ -10,7 +10,7 @@ class Elas(Element):
 #   ****************** 
 #      INITIALIZER
 #   ******************
-  def __init__(self, E: float = -1., nu: float = -1., isplanestress: bool = True, b: list[float] = [0,0], nodevec: list[int] = []):
+  def __init__(self, E: float = -1., nu: float = -1., isplanestress: bool = True, b: list[float] = [0,0], nodevec: list[int] = [], t: float = 1.0):
     """Initializer for Elasticity element.
 
     Args:
@@ -32,6 +32,7 @@ class Elas(Element):
     self.nu = nu # Poisson's ratio
     self.b = b # body force
     self.isplanestress = isplanestress # plane stress or plane strain
+    self.t = t # thickness
     self.Dmat = self.createDmat(E,nu,isplanestress) # constitutive matrix
     super().activateChecks()
  

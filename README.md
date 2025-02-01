@@ -2,6 +2,22 @@
 This project was created to help students develop their first finite element (FE) code for
 elasticity problems applying object-oriented programming principles.
 
+## Quick Steps
+
+1. Change the folder name from `PyFET-Students` to `PyFET`.
+2. Install all required libraries (see Required Libraries section).
+3. Create an empty Python script at the same level as the `PyFET` directory (see Folder Structure section).
+4. Fill the empty script with the following Python code:
+
+```python
+from PyFET.Node import *
+n1 = Node([1,0])
+print(f"node n1 = \n{n1}")
+print("PyFET is working properly!")
+```
+
+If the message `PyFET is working properly!` appears, the installation is successful.
+
 ## Installing Python
 
 To install Python, follow these steps:
@@ -83,9 +99,10 @@ analysis.generateSolutionVTK(filename="filename.vtk",vecnames=vecnames,scalnames
 
 To visualize the VTK output file, you can use ParaView:
 
-1. Open ParaView.
-2. Go to `File` > `Open` and select the `output.vtk` file.
-3. Click `Apply` to load the data.
-4. Use the visualization tools in ParaView to explore your results.
+1. Download ParaView from the official website: [paraview.org](https://www.paraview.org/download/).
+2. Open ParaView.
+3. Go to `File` > `Open` and select the `filename.vtk` file.
+4. Click `Apply` to load the data.
+5. Use the visualization tools in ParaView to explore your results.
 
 With these steps, you should be able to set up and use PyFET for your finite element analysis projects.

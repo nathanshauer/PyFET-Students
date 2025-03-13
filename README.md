@@ -80,7 +80,7 @@ Your folder structure should look something like this:
 
 ## Generating Output in VTK Format
 
-PyFET generates outputs in VTK format, which can be visualized using ParaView. Two functions should be implemented, one to simply visualize the domain and mesh, and another to visualize the solution fields after running. For the mesh/domain:
+PyFET is designed to generate outputs in VTK format, which can be visualized using ParaView. **Throughout the course, two functions will be implemented:** one to simply visualize the domain and mesh, and another to visualize the solution fields after running. For the mesh/domain:
 
 ```python
 # Printing mesh in vtk format

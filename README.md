@@ -51,7 +51,7 @@ You can install these libraries using pip:
 python -m pip install gmsh numpy scipy
 ```
 
-Make sure the Python version you are using is the same as the one you installed the libraries. It is no uncommon for an environment to have more than one Python version installed.
+Make sure the Python version you are using is the same as the one you installed the libraries. It is not uncommon for an environment to have more than one Python version installed.
 
 ## Using PyFET as a Library
 

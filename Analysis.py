@@ -2,7 +2,6 @@ from .OOInterface import *
 from .Element import *
 from .Mesh import *
 import numpy as np
-from tqdm.auto import tqdm
 
 class Analysis(OOInterface):
   """

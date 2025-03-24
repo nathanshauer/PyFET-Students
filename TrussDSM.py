@@ -10,7 +10,7 @@ class TrussDSM(Element):
 #   ****************** 
 #      INITIALIZER
 #   ******************
-  def __init__(self, E: float = -1., A: float = -1., tx: float = 0., nodevec: list[int] = []):
+  def __init__(self, E: float = -1., A: float = -1., tx: float = 0., nodevec: list[Node] = []):
     """Initializer for TrussDSM class
 
     Args:

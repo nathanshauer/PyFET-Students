@@ -28,7 +28,7 @@ class BarBC(Bar):
 #   ****************** 
 #        METHODS
 #   ******************   
-  def calcstiff(self):
+  def calcstiff(self)->tuple[np.ndarray,np.ndarray]:
     DebugStop("YOUR CODE GOES HERE")   
 
     # Create kel and fel with the right sizes and compute them. Then, return them both

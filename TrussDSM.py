@@ -51,7 +51,7 @@ class TrussDSM(Element):
 # ------------------------------------------------
 # ------------------------------------------------
 
-  def calcstiff(self):
+  def calcstiff(self)->tuple[np.ndarray,np.ndarray]:
 
     DebugStop("YOUR CODE GOES HERE")
 

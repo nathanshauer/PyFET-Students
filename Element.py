@@ -106,7 +106,7 @@ class Element(ABC,OOInterface):
     x = N @ elnodevec
     return x
   
-  def calcstiff(self):
+  def calcstiff(self)->tuple[np.ndarray,np.ndarray]:
     """Computes the element stiffness matrix
     """
     DebugStop("YOUR CODE GOES HERE")

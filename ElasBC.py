@@ -28,7 +28,7 @@ class ElasBC(Elas):
 #   ****************** 
 #        METHODS
 #   ******************   
-  def calcstiff(self):
+  def calcstiff(self)->tuple[np.ndarray,np.ndarray]:
 
     # Create kel and fel with the right sizes and compute them. Then, return them both
     # Note that for elasticity, each node has two directions x and y

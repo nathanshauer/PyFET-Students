@@ -40,11 +40,11 @@ class ElasTria3(Elas):
     if nodind < 0 or nodind > 2:
       DebugStop("Invalid node index")
     if nodind == 0:
-      return [1.,0.]
-    elif nodind == 1:
-      return [0.,1.]  
-    elif nodind == 2:
       return [0.,0.]
+    elif nodind == 1:
+      return [1.,0.]  
+    elif nodind == 2:
+      return [0.,1.]
     else:
       DebugStop("Invalid node index")
 

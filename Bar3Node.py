@@ -52,13 +52,13 @@ class Bar3Node(Bar):
 # ------------------------------------------------
 # ------------------------------------------------
   
-  def nodeorder(self) -> list[int]:
+  def nodeorder(self)->list[int]:
     return [0,2,1] # vtk expects nodes in this order
 
 # ------------------------------------------------
 # ------------------------------------------------  
   
-  def vtktype(self) -> int:
+  def vtktype(self)->int:
     return 21
 
 # ------------------------------------------------

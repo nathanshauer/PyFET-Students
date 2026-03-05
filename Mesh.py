@@ -59,6 +59,14 @@ class Mesh(OOInterface):
 # ------------------------------------------------
 
   def nequations(self)->int:
+    """
+    Calculate the total number of equations in the mesh.
+
+    Returns:
+        int: Total number of equations needed to represent the system,
+             based on the sum of state variables across all nodes.
+    """    
+
     DebugStop("YOUR CODE GOES HERE")
     # Loop through elements and count the number of state variables
     # Note you will have to avoid counting the same node twice

@@ -109,7 +109,6 @@ class Element(ABC,OOInterface):
   def calcstiff(self)->tuple[np.ndarray,np.ndarray]:
     """Computes the element stiffness matrix
     """
-
     DebugStop("YOUR CODE GOES HERE")
 
     # Get the integration rule
@@ -155,7 +154,7 @@ class Element(ABC,OOInterface):
 # ------------------------------------------------
   
   @abstractmethod
-  def jacobian(self, qsivec: list[float], dNdqsi: list[float])->tuple[float,list[float],list[float]]:
+  def jacobian(self, dNdqsi: list[float])->tuple[float,list[float],list[float]]:
     """Computes the jacobian matrix at a point qsivec
 
     Args:

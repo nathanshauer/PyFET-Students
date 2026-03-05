@@ -63,7 +63,7 @@ class Elas(Element):
 # ------------------------------------------------
 # ------------------------------------------------
 
-  def jacobian(self, qsivec: list[float], dNdqsi: list[float])->tuple[float,list[float],list[float]]:
+  def jacobian(self, dNdqsi: list[float])->tuple[float,list[float],list[float]]:
         
     DebugStop("YOUR CODE GOES HERE")    
     # return jac, invjac, detjac

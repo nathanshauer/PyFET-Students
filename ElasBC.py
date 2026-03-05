@@ -56,10 +56,10 @@ class ElasBC(Elas):
 # ------------------------------------------------
 # ------------------------------------------------
 # Methods that come from abstract class Element 
-# and need to be implemented but are not used
+# and need to be implemented but are potentially not used
 
-  def jacobian(self, qsivec: list[float], dNdqsi: list[float])->tuple[float,list[float],list[float]]:
-    DebugStop("Should not be called")
+  def jacobian(self, dNdqsi: list[float])->tuple[float,list[float],list[float]]:
+    DebugStop("Should not be called unless trying to implement integral over boundary")
 
 # ------------------------------------------------
 # ------------------------------------------------

@@ -120,7 +120,7 @@ class TrussDSM(Element):
 # ------------------------------------------------
 # ------------------------------------------------
 
-  def jacobian(self, qsivec: list[float], dNdqsi: list[float])->tuple[float,list[float],list[float]]:
+  def jacobian(self, dNdqsi: list[float])->tuple[float,list[float],list[float]]:
     DebugStop("Should never be called in TrussDSM")
   
 # ------------------------------------------------

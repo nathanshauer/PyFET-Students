@@ -53,7 +53,7 @@ class Bar(Element):
 # ------------------------------------------------
 # ------------------------------------------------
 
-  def jacobian(self, qsivec: list[float], dNdqsi: list[float])->tuple[float,list[float],list[float]]:
+  def jacobian(self, dNdqsi: list[float])->tuple[float,list[float],list[float]]:
     # Assume equally spaced nodes for both Bar2Node and Bar3Node
     DebugStop("YOUR CODE GOES HERE")   
   
@@ -61,7 +61,11 @@ class Bar(Element):
 # ------------------------------------------------
 
   def postprocvar(self, var, qsivec: list[float], ue: list[float])->list[float]:
+    # Compute shape functions and derivatives
+    # Do an if/else for the different tipes of post processing variables (var)
+    # For instance, to compute strain you wull need to createB and do B@ue
     DebugStop("YOUR CODE GOES HERE")   
+
 
 # ------------------------------------------------
 # ------------------------------------------------

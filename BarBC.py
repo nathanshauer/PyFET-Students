@@ -53,7 +53,7 @@ class BarBC(Bar):
 # Methods that come from abstract class Element 
 # and need to be implemented but are not used
 
-  def jacobian(self, qsivec: list[float], dNdqsi: list[float])->tuple[float,list[float],list[float]]:
+  def jacobian(self, dNdqsi: list[float])->tuple[float,list[float],list[float]]:
     DebugStop("Should not be called")
 
 # ------------------------------------------------

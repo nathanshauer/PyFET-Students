@@ -102,13 +102,13 @@ class Analysis(OOInterface):
 # ------------------------------------------------
 # ------------------------------------------------
 
-  def computeEnergyNormError(self):
-    DebugStop("CHALLENGE: Implement the computation of the error in energy norm")
-    # Use the form a^T * K_glob * a.
-    # In this class variables it is self.u.T @ self.K @ self.u
+  def computeEnergyNormError(self, Uex: float)->float: 
+    DebugStop("YOUR CODE GOES HERE")
+    # Use the form 1/2 * a^T * K_glob * a.
+    # In this class variables, it is self.u.T @ self.K @ self.u
     # Note that the stiffness matrix cannot have any boundary condition applied to it
     # so you will have to recompute it without the boundary conditions applied through big numbers
-    
+    # # The error is the sqrt of abs(1- Uh/Uex). 
 
 # ------------------------------------------------
 # ------------------------------------------------

@@ -9,19 +9,19 @@ class Bar2Node(Bar):
 #   ****************** 
 #      INITIALIZER
 #   ******************
-  def __init__(self, E: float = -1., A: float = -1., tx: float = 0., nodevec: list[int] = []):
+  def __init__(self, E: float = -1., A: float = -1., b: float = 0., nodevec: list[int] = []):
     """Initializer for Bar2Node element.
 
     Args:
         E (float, optional): Young modulus. Defaults to -1..
         A (float, optional): Section area. Defaults to -1..
-        tx (float, optional): Distribute load. Defaults to 0..
+        b (float, optional): Distribute load. Defaults to 0..
         nodevec (list[int], optional): node vector. Defaults to [].
     """
     if len(nodevec) > 2 or len(nodevec) < 1:
       DebugStop("Inconsistent nodevec vector")
         
-    super().__init__(nodevec=nodevec,E=E,A=A,tx=tx)
+    super().__init__(nodevec=nodevec,E=E,A=A,b=b)
     super().deactivateChecks()
     self.pord = 1 # order of the element
     super().activateChecks()

@@ -109,6 +109,7 @@ class Element(ABC,OOInterface):
   def calcstiff(self)->tuple[np.ndarray,np.ndarray]:
     """Computes the element stiffness matrix
     """
+
     DebugStop("YOUR CODE GOES HERE")
 
     # Get the integration rule

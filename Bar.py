@@ -9,13 +9,13 @@ class Bar(Element):
 #   ****************** 
 #      INITIALIZER
 #   ******************
-  def __init__(self, E: float = -1., A: float = -1., tx: float = 0., nodevec: list[Node] = []):
+  def __init__(self, E: float = -1., A: float = -1., b: float = 0., nodevec: list[Node] = []):
     """Initializer for Bar element.
 
     Args:
         E (float, optional): Young modulus. Defaults to -1..
         A (float, optional): Section area. Defaults to -1..
-        tx (float, optional): Distribute load. Defaults to 0..
+        b (float, optional): Distribute load. Defaults to 0..
         nodevec (list[int], optional): Element nodes. Defaults to [].
     """
     if E < 0 or A < 0:
@@ -29,14 +29,14 @@ class Bar(Element):
     self.E = E
     self.A = A
     self.Dmat = E * A
-    self.tx = tx
+    self.b = b
     super().activateChecks()
  
 #   ****************** 
 #        METHODS
 #   ******************   
   def __str__(self):    
-    return f"Material Properties:\n E = {self.E}, A = {self.A}, tx = {self.tx}" + super().__str__()
+    return f"Material Properties:\n E = {self.E}, A = {self.A}, b = {self.b}" + super().__str__()
     
 # ------------------------------------------------
 # ------------------------------------------------

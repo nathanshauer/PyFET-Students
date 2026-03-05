@@ -105,21 +105,21 @@ class GmshReader(OOInterface):
         DebugStop("TrussDSM should be a line")      
       E = self.physicalgroupToBC[pg_name]["E"]
       A = self.physicalgroupToBC[pg_name]["A"]
-      tx = self.physicalgroupToBC[pg_name]["tx"]
+      b = self.physicalgroupToBC[pg_name]["b"]
       nodevec = [self.mesh.nodevec[nodind] for nodind in el_node_indices]
-      el = TrussDSM(E=E,A=A,tx=tx,nodevec=nodevec)      
+      el = TrussDSM(E=E,A=A,b=b,nodevec=nodevec)      
 
     elif self.type == "Bar2Node" or self.type == "Bar3Node":
       if elname != "line":
         DebugStop("Bar2Node or Bar3Node should be a line")      
       E = self.physicalgroupToBC[pg_name]["E"]
       A = self.physicalgroupToBC[pg_name]["A"]
-      tx = self.physicalgroupToBC[pg_name]["tx"]
+      b = self.physicalgroupToBC[pg_name]["b"]
       nodevec = [self.mesh.nodevec[nodind] for nodind in el_node_indices]
       if self.type == "Bar2Node":
-        el = Bar2Node(E=E,A=A,tx=tx,nodevec=nodevec)
+        el = Bar2Node(E=E,A=A,b=b,nodevec=nodevec)
       elif self.type == "Bar3Node":
-        el = Bar3Node(E=E,A=A,tx=tx,nodevec=nodevec)
+        el = Bar3Node(E=E,A=A,b=b,nodevec=nodevec)
         DebugStop("Bar3Node was never tested. Please, comment this DebugStop and continue with caution")
 
     elif self.type == "Elas2D":

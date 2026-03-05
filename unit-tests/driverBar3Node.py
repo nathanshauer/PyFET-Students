@@ -16,9 +16,9 @@ def main():
   n12 = Node(coord=np.array([3.5,0.]))
 
   # Creating elements
-  el0 = Bar3Node(E=25000.,A=1.,nodevec=[n0,n01,n1],tx=1)
-  el1 = Bar3Node(E=25000.,A=1.,nodevec=[n1,n12,n2],tx=1)
-  # el2 = Bar(E=25000.,A=1.,nodevec=[n2,n0],tx=-1)
+  el0 = Bar3Node(E=25000.,A=1.,nodevec=[n0,n01,n1],b=1)
+  el1 = Bar3Node(E=25000.,A=1.,nodevec=[n1,n12,n2],b=1)
+  # el2 = Bar(E=25000.,A=1.,nodevec=[n2,n0],b=-1)
   
   # Creating BCs
   bc0 = BarBC(E=25000,A=1,nodevec=[n0],type="Displacement",val=[0.])

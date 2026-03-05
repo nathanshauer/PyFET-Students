@@ -13,9 +13,9 @@ def main():
   n2 = Node(coord=np.array([2.,2.]))
 
   # Creating elements
-  el0 = TrussDSM(E=25000.,A=1.,nodevec=[n0,n1],tx=0)
-  el1 = TrussDSM(E=25000.,A=1.,nodevec=[n1,n2],tx=0)
-  el2 = TrussDSM(E=25000.,A=1.,nodevec=[n2,n0],tx=-1)
+  el0 = TrussDSM(E=25000.,A=1.,nodevec=[n0,n1],b=0)
+  el1 = TrussDSM(E=25000.,A=1.,nodevec=[n1,n2],b=0)
+  el2 = TrussDSM(E=25000.,A=1.,nodevec=[n2,n0],b=-1)
   
   # Creating BCs
   bc0 = TrussDSMBC(E=25000,A=1,nodevec=[n0],type="Displacement",val=[0.,0.])

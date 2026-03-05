@@ -10,7 +10,7 @@ from PyFET.GmshReader import *
 def main():
   physicalgroupToBC = {
     "bar": {
-      "E": 25000., "A": 1., "tx": 0.
+      "E": 25000., "A": 1., "b": 0.
     },
     "fixed": {
       "type": "Displacement",

@@ -9,7 +9,7 @@ from PyFET.GmshReader import *
 def main():
   physicalgroupToBC = {
     "truss": {
-      "E": 25000., "A": 1., "tx": 0.
+      "E": 25000., "A": 1., "b": 0.
     },
     "fixed": {
       "type": "Displacement",

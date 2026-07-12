@@ -24,7 +24,7 @@ class Elas(Element):
       DebugStop("Inconsistent material properties")
     if len(nodevec) > 0:
       if (False in [len(nod.coord) == 2 or len(nod.coord) == 3 for nod in nodevec]):
-        DebugStop("Nodes should always have two coordinates (x,y) for Bar simulations")
+        DebugStop("Nodes should always have two or three coordinates (x,y) or (x,y,z) for Elasticity simulations. For 2D simulations, the z coordinate should be set to zero or be nonexistent.")
         
     super().__init__(nodevec=nodevec,dim=2)
     super().deactivateChecks()

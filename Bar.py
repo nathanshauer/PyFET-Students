@@ -22,7 +22,7 @@ class Bar(Element):
       DebugStop("Inconsistent material properties")
     if len(nodevec) > 0:
       if (False in [len(nod.coord) == 2 or len(nod.coord) == 3 for nod in nodevec]):
-        DebugStop("Nodes should always have two coordinates (x,y) for Bar simulations")
+        DebugStop("PyFET only supports Bar simulations where the nodes have two or three coordinates (x,y) or (x,y,0)")
         
     super().__init__(nodevec=nodevec,dim=1)
     super().deactivateChecks()
